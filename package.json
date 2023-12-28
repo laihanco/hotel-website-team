@@ -14,7 +14,9 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged"
   },
   "dependencies": {
     "axios": "^1.6.2",
@@ -34,6 +36,8 @@
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "npm-run-all2": "^6.1.1",
     "postcss": "^8.4.32",
     "prettier": "^3.0.3",
