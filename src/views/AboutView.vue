@@ -2,6 +2,10 @@
   <div>
     <div class="mb-5 text-h1">Typography</div>
 
+    <div class="bg-neutral-black p-2">
+      <base-steppers :activeStep="1"></base-steppers>
+    </div>
+
     <h1 class="mb-5 text-h1 desktop:text-h0">Display Heading 100px B</h1>
     <h2 class="mb-5 text-h2 desktop:text-h1">H1. Heading 48px B</h2>
     <h3 class="mb-5 text-h3 desktop:text-h2">H2. Heading 40px B</h3>
@@ -15,5 +19,9 @@
     <p class="mb-3 text-tiny">tiny 12px R</p>
   </div>
 </template>
+
+<script setup lang="ts">
+import BaseSteppers from '@/components/Stepper/BaseSteppers.vue';
+</script>
 
 <style></style>
