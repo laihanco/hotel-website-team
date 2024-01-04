@@ -3,7 +3,9 @@
     <div class="flex flex-col items-center justify-center gap-y-1">
       <span
         class="flex h-[32px] w-[32px] items-center justify-center rounded-full transition-colors duration-300"
-        :class="active ? 'bg-primary-100 text-[#fff]' : 'border border-neutral-60 text-neutral-60'"
+        :class="
+          active ? 'bg-primary-100 text-neutral-white' : 'border border-neutral-60 text-neutral-60'
+        "
       >
         <transition name="fade" mode="out-in">
           <ic_check v-if="active" />
@@ -12,7 +14,7 @@
       </span>
       <span
         class="text-xs md:text-base md:leading-6 font-bold leading-[21px] transition-colors duration-300"
-        :class="active ? 'text-[#fff]' : 'text-neutral-60'"
+        :class="active ? 'text-neutral-white' : 'text-neutral-60'"
         ><slot
       /></span>
     </div>

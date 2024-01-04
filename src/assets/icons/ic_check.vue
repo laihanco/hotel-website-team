@@ -1,5 +1,11 @@
 <template>
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    :width="size"
+    :height="size"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g id="ic_check" clip-path="url(#clip0_3214_3212)">
       <path
         id="Vector"
@@ -19,14 +25,16 @@
 import { toRefs } from 'vue';
 
 interface Props {
-  color?: ('white' | 'black') & string;
+  color?: 'white' | 'black' | (string & {});
+  size?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   color: 'white',
+  size: 16,
 });
 
-const { color } = toRefs(props);
+const { color, size } = toRefs(props);
 </script>
 
 <style scoped></style>
