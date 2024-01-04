@@ -4,8 +4,12 @@
       <span
         class="flex h-[32px] w-[32px] items-center justify-center rounded-full transition-colors duration-300"
         :class="active ? 'bg-primary-100 text-[#fff]' : 'border border-neutral-60 text-neutral-60'"
-        >1</span
       >
+        <transition name="fade" mode="out-in">
+          <ic_check v-if="active" />
+          <span v-else>{{ indicator }}</span>
+        </transition>
+      </span>
       <span
         class="text-xs md:text-base md:leading-6 font-bold leading-[21px] transition-colors duration-300"
         :class="active ? 'text-[#fff]' : 'text-neutral-60'"
@@ -18,10 +22,12 @@
 
 <script setup lang="ts">
 import { toRefs } from 'vue';
+import ic_check from '@/assets/icons/ic_check.vue';
 
 interface Props {
   active: boolean;
   showSeparator?: boolean;
+  indicator: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -32,8 +38,4 @@ const props = withDefaults(defineProps<Props>(), {
 const { active, showSeparator } = toRefs(props);
 </script>
 
-<style scoped>
-.step-primary {
-  @apply bg-primary-100;
-}
-</style>
+<style scoped></style>
