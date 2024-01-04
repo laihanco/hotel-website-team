@@ -15,7 +15,7 @@
     </g>
     <defs>
       <clipPath id="clip0_3214_3212">
-        <rect width="16" height="16" :fill="color" />
+        <rect :width="size" :height="size" :fill="color" />
       </clipPath>
     </defs>
   </svg>
@@ -25,12 +25,12 @@
 import { toRefs } from 'vue';
 
 interface Props {
-  color?: 'white' | 'black' | (string & {});
+  color?: 'currentColor' & string;
   size?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  color: 'white',
+  color: 'currentColor',
   size: 16,
 });
 
