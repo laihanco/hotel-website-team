@@ -1,8 +1,12 @@
 <template>
   <div>
     <h4>Stepper</h4>
-    <div class="bg-neutral-black p-2">
-      <base-steppers :activeStep="activeStep"></base-steppers>
+    <div class="bg-neutral-black p-2 text-center">
+      <base-steppers
+        class="w-full max-w-[416px]"
+        :activeStep="activeStep"
+        :steps="['title', 'title', 'title']"
+      ></base-steppers>
     </div>
     <button
       type="button"
