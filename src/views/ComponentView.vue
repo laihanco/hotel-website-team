@@ -21,14 +21,36 @@
     >
       decrement
     </button>
+    <h4>SectionTab</h4>
+    <div class="bg-neutral-black p-2 text-center">
+      <section-tab :tabs="tabs" v-model:value="tab">
+        <template #oasis>
+          <span class="text-neutral-white">oasis</span>
+        </template>
+        <template #theBeatles>
+          <span class="text-neutral-white">the Beatles</span>
+        </template>
+        <template #jayChou>
+          <span class="text-neutral-white">Jay Chou</span>
+        </template>
+      </section-tab>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import BaseSteppers from '@/components/Stepper/BaseSteppers.vue';
+import { SectionTab, type Tab } from '@/components/SectionTab';
 
 const activeStep = ref(1);
+const tabs = ref<Tab[]>([
+  { name: 'oasis', tab: 'Oasis' },
+  { name: 'theBeatles', tab: 'the Beatles' },
+  { name: 'jayChou', tab: 'Jay Chou' },
+]);
+
+const tab = ref('oasis');
 </script>
 
 <style scoped></style>
