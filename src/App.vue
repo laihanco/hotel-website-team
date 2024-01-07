@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router';
   <nav class="p-5 text-center">
     <router-link to="/" class="text-white mr-4">Color Palette</router-link>
     <router-link to="/about" class="text-white mr-4">Typography</router-link>
-    <router-link to="/component-view" class="text-white">Component</router-link>
+    <router-link :to="{ name: 'component' }" class="text-white">Components</router-link>
   </nav>
 
   <div class="p-10">

@@ -3,7 +3,7 @@ export default {
   content: ['./index.html', './src/**/*.vue'],
   theme: {
     screens: {
-      desktop: '374px',
+      desktop: '768px',
     },
     fontFamily: {
       serif: ['Noto Serif TC', 'serif'],
