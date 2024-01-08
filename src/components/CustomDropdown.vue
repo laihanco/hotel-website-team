@@ -31,8 +31,8 @@
           <li
             v-for="(option, index) in options"
             :key="index"
-            class="px-3 py-2 transition-colors duration-300 hover:bg-primary-60"
-            @mousedown.prevent="setOption(option); $emit('update:selectedOption', option.value)"
+            class="px-3 py-2 transition-colors duration-300 duration-300 hover:bg-primary-60"
+            @mousedown.prevent="setOption(option.label); $emit('update:selectedOption', option.value)"
           >
             {{ option.label }}
           </li>
@@ -49,19 +49,19 @@ const props = defineProps({
     default: null,
   },
   options: {
-    type: Array,
+    type: Array as () => { label: string; value: number }[],
     default() {
       return [];
     },
   },
 });
-const localOption = ref(props.selectedOption);
+const localOption = ref<string | number>(props.selectedOption);
 const isOptionsExpanded = ref(false);
 
-const setOption = (option) => {
-      localOption.value = option.value;
-      isOptionsExpanded.value = false;
-    }
+const setOption = (label:string) => {
+  localOption.value = label;
+  isOptionsExpanded.value = false;
+}
 </script>
 
 <style>

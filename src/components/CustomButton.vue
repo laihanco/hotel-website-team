@@ -36,25 +36,25 @@ const buttonClass = computed(() => {
 	switch (props.buttonType) {
 		case 'primary':
 			return {
-        'flex justify-center items-center rounded-lg py-4 px-8 cursor-pointer text-neutral-white bg-primary-100 hover:bg-primary-120':true,
+        'flex justify-center items-center rounded-lg py-4 px-8 cursor-pointer text-neutral-white bg-primary-100 duration-300 hover:bg-primary-120':true,
         '!bg-neutral-transparent !text-neutral-60 opacity-80 !cursor-default': props.isDisable,
       }
 
 		case 'secondary':
 		return {
-			'flex justify-center items-center rounded-lg py-4 px-8 cursor-pointer text-primary-100 bg-neutral-white border border-primary-100 hover:bg-primary-10':true,
+			'flex justify-center items-center rounded-lg py-4 px-8 cursor-pointer text-primary-100 bg-neutral-white border border-primary-100 duration-300 hover:bg-primary-10':true,
 			'!bg-neutral-white !text-neutral-60 opacity-80 !cursor-default': props.isDisable,
 		};
 
 		case 'ghost':
 		return {
-			'flex justify-center items-center py-4 px-8 cursor-pointer text-neutral-white hover:text-primary-100':true,
+			'flex justify-center items-center py-4 px-8 cursor-pointer text-neutral-white duration-300 hover:text-primary-100':true,
 			'!text-neutral-60 opacity-80 !cursor-default': props.isDisable,
 		};
 
 		case 'text':
 		return {
-			'flex justify-center items-center py-4 px-8 cursor-pointer text-primary-100 hover:text-primary-120':true,
+			'flex justify-center items-center py-4 px-8 cursor-pointer text-primary-100 duration-300 hover:text-primary-120':true,
 			'!text-neutral-60 opacity-80 !cursor-default': props.isDisable,
 		};
 		default:

@@ -61,7 +61,7 @@ export default {
         10: '#FDECEF',
       },
       neutral: {
-        bg: '140F0A',
+        bg: '#140F0A',
         black: '#000000',
         80: '#4B4B4B',
         60: '#909090',

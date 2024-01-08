@@ -6,7 +6,7 @@
 		</div>
 		<input
 			:value="inputValue"
-			@input="$emit('update:inputValue', $event.target.value)"
+			@input="$emit('update:inputValue', ($event.target as HTMLInputElement).value)"
 			class="text-neutral-80 w-full p-4 rounded-lg focus:border focus:border-primary-100 solid-shadow outline-none placeholder-neutral-60 "
 			:class="isError ? 'border border-alert-100': ''"
 			:placeholder="placeholder"
