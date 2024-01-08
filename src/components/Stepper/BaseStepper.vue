@@ -15,7 +15,7 @@
         </transition>
       </span>
       <span
-        class="text-xs md:text-base md:leading-6 font-bold leading-[21px] transition-colors duration-300"
+        class="text-body2 font-bold leading-[21px] transition-colors duration-300 desktop:text-body desktop:leading-6"
         :class="active || complete ? 'text-neutral-white' : 'text-neutral-60'"
         ><slot
       /></span>
