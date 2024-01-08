@@ -1,7 +1,5 @@
 <template>
-  <div class="px-3 py-20"></div>
-
-  <div
+  <footer
     class="flex flex-col flex-wrap bg-neutral-bg px-3 py-20 text-neutral-white desktop:flex-row desktop:px-40"
   >
     <div class="mb-20 flex w-full flex-col flex-wrap justify-between desktop:flex-row">
@@ -49,7 +47,7 @@
       <p>806023 台灣高雄市新興區六角路123號</p>
       <p>© 享樂酒店 2023 All Rights Reserved.</p>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script setup lang="ts"></script>
