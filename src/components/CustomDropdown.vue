@@ -31,7 +31,7 @@
           <li
             v-for="(option, index) in options"
             :key="index"
-            class="px-3 py-2 transition-colors duration-300 duration-300 hover:bg-primary-60"
+            class="px-3 py-2 transition-colors duration-300 hover:bg-primary-60"
             @mousedown.prevent="setOption(option.label); $emit('update:selectedOption', option.value)"
           >
             {{ option.label }}
@@ -43,13 +43,14 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue';
+import type { PropType } from 'vue'
 const props = defineProps({
 	selectedOption: {
     type: Number,
     default: null,
   },
   options: {
-    type: Array as () => { label: string; value: number }[],
+    type: Array as PropType<{ label: string; value: number }[]>,
     default() {
       return [];
     },

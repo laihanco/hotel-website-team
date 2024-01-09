@@ -6,8 +6,8 @@
 		</div>
 		<input
 			:value="inputValue"
-			@input="$emit('update:inputValue', ($event.target as HTMLInputElement).value)"
-			class="text-neutral-80 w-full p-4 rounded-lg focus:border focus:border-primary-100 solid-shadow outline-none placeholder-neutral-60 "
+			@input="onInput"
+			class="text-neutral-80 w-full p-4 rounded-lg border border-neutral-transparent focus:border-primary-100 solid-shadow outline-none placeholder-neutral-60 "
 			:class="isError ? 'border border-alert-100': ''"
 			:placeholder="placeholder"
 			type="text"
@@ -17,7 +17,9 @@
 </template>
 
 <script setup lang="ts">
-
+const emit = defineEmits<{
+'update:inputValue': [value: string];
+}>();
 const props = defineProps({
 	label: {
     type: String,
@@ -40,6 +42,9 @@ const props = defineProps({
     default: 'Error message',
 	}
 });
+function onInput(event: Event) {
+  emit('update:inputValue', (event.target as HTMLInputElement).value);
+}
 
 </script>
 
