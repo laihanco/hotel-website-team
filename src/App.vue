@@ -15,8 +15,6 @@ import BaseModal from '@/components/BaseModal.vue';
 
     <BaseFooter />
   </div>
-
-  <BaseModal />
 </template>
 
 <style></style>
